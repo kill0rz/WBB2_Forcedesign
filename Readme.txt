@@ -60,7 +60,7 @@ Füge darüber ein:#
 
 $origboardstyle = $wbbuserdata['styleid'];
 if (isset($forcedesignid)) {
-	$style = $db->query_first("SELECT s.styleid, s.templatepackid, s.designpackid, tp.templatestructure FROM bb".$n."_styles s LEFT JOIN bb".$n."_templatepacks tp ON(tp.templatepackid=s.templatepackid) WHERE s.styleid = '$forcedesignid'");
+	$style = $db->query_first("SELECT s.styleid, s.templatepackid, s.designpackid, tp.templatestructure FROM bb" . $n . "_styles s LEFT JOIN bb" . $n . "_templatepacks tp ON(tp.templatepackid=s.templatepackid) WHERE s.styleid = '$forcedesignid'");
 	$wbbuserdata['designpackid'] = $style['designpackid'];
 	$wbbuserdata['templatepackid'] = $style['templatepackid'];
 	$wbbuserdata['styleid'] = $style['styleid'];
